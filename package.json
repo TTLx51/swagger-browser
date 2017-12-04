@@ -1,0 +1,15 @@
+{
+  "name": "swagger-browser",
+  "version": "0.0.1",
+  "description": "Browse multiple swagger api with swagger ui",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "author": "TLI",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}

@@ -1,0 +1,8 @@
+version: '2'
+services:
+  swagger-browser:
+    image: node:8.9-alpine
+    working_dir: /app
+    volumes:
+      - $PWD:/app
+    command: npm run start
