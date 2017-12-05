@@ -21,7 +21,7 @@ services:
       - $PWD:/app
     command: su node -c "cd /app && npm i && npm run start"
     container_name: browser
-    ports:
+    expose:
       - 8080
     networks:
       swagger.loc:
@@ -33,8 +33,8 @@ services:
     hostname: swaggerui.swagger.loc
     image: swaggerapi/swagger-ui
     environment:
-      - API_URL=http://browser.swagger.loc/tiptv/swagger.json
-    ports:
+      - API_URL=http://browser.swagger.loc:81/tiptv/swagger.json
+    expose:
       - 8080
     networks:
       swagger.loc:
