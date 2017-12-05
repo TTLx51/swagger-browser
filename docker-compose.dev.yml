@@ -13,6 +13,7 @@ services:
           - proxy.swagger.loc
   swagger-browser:
     container_name: browser
+    restart: unless-stopped
     hostname: browser.swagger.loc
     image: node:8.9-alpine
     working_dir: /app
@@ -28,6 +29,7 @@ services:
           - browser.swagger.loc
   swagger-ui:
     container_name: swaggerui
+    restart: unless-stopped
     hostname: swaggerui.swagger.loc
     image: swaggerapi/swagger-ui
     environment:
